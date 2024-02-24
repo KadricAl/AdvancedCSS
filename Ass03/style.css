@@ -1,0 +1,58 @@
+h2 {
+    font-family: sans-serif;
+    color: grey;
+}
+
+p {
+    color: grey;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px
+}
+
+.box {
+    width: 140px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightskyblue;
+    border-radius: 10%;
+    border: 2px solid lightgray;
+    overflow: hidden;
+}
+
+.img {
+    height: 80%;
+    background-image: url("img/image.png");
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.img-desc {
+    height: 20%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    font-family: sans-serif;
+}
+
+@media  screen and (max-width: 768px) and (max-resolution: 2dppx) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media  screen and (max-width: 414px) and (max-resolution: 3dppx) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+}
